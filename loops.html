@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Do While Loop Examples</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(189, 155, 189);
+            padding: 30px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .box {
+            border: 2px solid blue;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            height: 40px;
+            padding: 0 10px;
+            font-size: 15px;
+            box-sizing: border-box;
+            margin-bottom: 12px;
+        }
+
+        .result-label {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        .result {
+            width: 100%;
+            min-height: 60px;
+            border: 1px solid blue;
+            box-sizing: border-box;
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            overflow-wrap: break-word;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 15px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 1. Print Start to Last -->
+    <div class="box">
+        <h1>Print Numbers</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start1" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last1" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result1"></div>
+
+        <button onclick="example1()">Print Numbers</button>
+    </div>
+
+
+    <!-- 2. Print Reverse -->
+    <div class="box">
+        <h1>Print Reverse</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start2" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last2" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result2"></div>
+
+        <button onclick="example2()">Print Numbers</button>
+    </div>
+
+
+    <!-- 3. Even Numbers -->
+    <div class="box">
+        <h1>Even Numbers</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start3" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last3" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result3"></div>
+
+        <button onclick="example3()">Print Numbers</button>
+    </div>
+
+
+    <!-- 4. Odd Numbers -->
+    <div class="box">
+        <h1>Odd Numbers</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start4" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last4" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result4"></div>
+
+        <button onclick="example4()">Print Numbers</button>
+    </div>
+
+
+    <!-- 5. Sum of numbers-->
+    <div class="box">
+        <h1>Sum of Numbers</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start5" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last5" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result5"></div>
+
+        <button onclick="example5()">Find Sum</button>
+    </div>
+
+
+    <!-- 6. Multiplication Table -->
+    <div class="box">
+        <h1>Multiplication Table</h1>
+
+        <label>Enter Number:</label>
+        <input type="text" id="num6" placeholder="Enter Number">
+
+        <label>Up To:</label>
+        <input type="text" id="last6" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result6"></div>
+
+        <button onclick="example6()">Print Table</button>
+    </div>
+
+
+    <!-- 7. Divisible by 3 -->
+    <div class="box">
+        <h1>Divisible by 3</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start7" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last7" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result7"></div>
+
+        <button onclick="example7()">Print Numbers</button>
+    </div>
+
+
+    <!-- 8.Count Numbers -->
+    <div class="box">
+        <h1>Count Numbers</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start8" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last8" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result8"></div>
+
+        <button onclick="example8()">Count Numbers</button>
+    </div>
+
+
+<!-- 9.sum of even numbers -->
+    <div class="box">
+        <h1>Sum of Even</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start9" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last9" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result9"></div>
+
+        <button onclick="example9()">Find Sum</button>
+    </div>
+
+    <!-- 10.Multiplies of 3 -->
+    <div class="box">
+        <h1>Multiples of 5</h1>
+
+        <label>Start Number:</label>
+        <input type="text" id="start10" placeholder="Enter Start Number">
+
+        <label>Last Number:</label>
+        <input type="text" id="last10" placeholder="Enter Last Number">
+
+        <div class="result-label">Result</div>
+        <div class="result" id="result10"></div>
+
+        <button onclick="example10()">Print Numbers</button>
+    </div>
+
+</div>
+
+
+<script>
+
+    // 1. Print Start to Last
+    function example1() {
+
+        let start = Number(document.getElementById("start1").value);
+        let last = Number(document.getElementById("last1").value);
+        let output = "";
+
+        do {
+            output = output + start + "<br>";
+            start++;
+        } while (start <= last);
+
+        document.getElementById("result1").innerHTML = output;
+    }
+
+
+    // 2. Print Reverse
+    function example2() {
+
+        let start = Number(document.getElementById("start2").value);
+        let last = Number(document.getElementById("last2").value);
+        let output = "";
+
+        do {
+            output = output + last + "<br>";
+            last--;
+        } while (last >= start);
+
+        document.getElementById("result2").innerHTML = output;
+    }
+
+
+    // 3. Even Numbers
+    function example3() {
+
+        let start = Number(document.getElementById("start3").value);
+        let last = Number(document.getElementById("last3").value);
+        let output = "";
+
+        if (start % 2 != 0) {
+            start++;
+        }
+
+        do {
+            output = output + start + "<br>";
+            start = start + 2;
+        } while (start <= last);
+
+        document.getElementById("result3").innerHTML = output;
+    }
+
+
+    // 4. Odd Numbers
+    function example4() {
+
+        let start = Number(document.getElementById("start4").value);
+        let last = Number(document.getElementById("last4").value);
+        let output = "";
+
+        if (start % 2 == 0) {
+            start++;
+        }
+
+        do {
+            output = output + start + "<br>";
+            start = start + 2;
+        } while (start <= last);
+
+        document.getElementById("result4").innerHTML = output;
+    }
+
+
+    // 5. Sum of Numbers
+    function example5() {
+
+        let start = Number(document.getElementById("start5").value);
+        let last = Number(document.getElementById("last5").value);
+        let sum = 0;
+
+        do {
+            sum = sum + start;
+            start++;
+        } while (start <= last);
+
+        document.getElementById("result5").innerHTML =
+            "Sum = " + sum;
+    }
+
+
+    // 6. Multiplication Table
+    function example6() {
+
+        let num = Number(document.getElementById("num6").value);
+        let last = Number(document.getElementById("last6").value);
+        let i = 1;
+        let output = "";
+
+        do {
+            output = output + num + " x " + i +
+                     " = " + (num * i) + "<br>";
+            i++;
+        } while (i <= last);
+
+        document.getElementById("result6").innerHTML = output;
+    }
+
+
+    // 7. Numbers Divisible by 3
+    function example7() {
+
+        let start = Number(document.getElementById("start7").value);
+        let last = Number(document.getElementById("last7").value);
+        let output = "";
+
+        do {
+            if (start % 3 == 0) {
+                output = output + start + "<br>";
+            }
+
+            start++;
+        } while (start <= last);
+
+        document.getElementById("result7").innerHTML = output;
+    }
+
+
+    // 8. Count Numbers
+    function example8() {
+
+        let start = Number(document.getElementById("start8").value);
+        let last = Number(document.getElementById("last8").value);
+        let count = 0;
+
+        do {
+            count++;
+            start++;
+        } while (start <= last);
+
+        document.getElementById("result8").innerHTML =
+            "Count = " + count;
+    }
+
+
+    // 9. Sum of Even Numbers
+    function example9() {
+
+        let start = Number(document.getElementById("start9").value);
+        let last = Number(document.getElementById("last9").value);
+        let sum = 0;
+
+        do {
+            if (start % 2 == 0) {
+                sum = sum + start;
+            }
+
+            start++;
+        } while (start <= last);
+
+        document.getElementById("result9").innerHTML =
+            "Even Sum = " + sum;
+    }
+
+
+    // 10. Multiples of 5
+    function example10() {
+
+        let start = Number(document.getElementById("start10").value);
+        let last = Number(document.getElementById("last10").value);
+        let output = "";
+
+        do {
+            if (start % 5 == 0) {
+                output = output + start + "<br>";
+            }
+
+            start++;
+        } while (start <= last);
+
+        document.getElementById("result10").innerHTML = output;
+    }
+
+</script>
+
+</body>
+</html>
